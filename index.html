@@ -1,0 +1,84 @@
+<html>
+<head>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+    <script src="https://unpkg.com/vue-select@latest"></script>
+    <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="C:/Users/shivs/pro/nodejs/vuejs/la2/master.css">
+    <title>University Index</title>
+</head>
+<body>
+
+
+<div class="background" id="vue-app">
+
+    <h1>UNIVERSITY INDEX</h1>   
+
+    <!-- {{ message }} -->
+    
+    <form name="appForm" method="post" action="">
+        <table>
+            <colgroup>
+                <col width="20%">
+                <col width="80%">
+            </colgroup>
+
+            <tr>
+                <td class="right-aligned">Select a country: </td>
+                <td>
+                    <!-- <select name="countrySelect"> -->
+                        <!-- <option v-for="item in countries">
+                            {{ item }}
+                        </option> -->
+
+                        <v-select v-model="countrySelected" :options="countries" @input="fetchUniversities();universitySelected=null"></v-select>
+                    <!-- </select>  -->
+                </td>
+            </tr>
+
+            <tr>
+                <td class="right-aligned">Select a university: </td>
+                <td>
+                    <v-select v-model="universitySelected" :options="universities" :label="'name'"></v-select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="right-aligned" :class="{ 'multiple-entries': (universitySelected != null && universitySelected.domains.length > 1) }">Domains: </td>
+                <td v-if="universitySelected!=null">
+                    <span v-for="domain in universitySelected.domains">{{ domain }}<br /></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="right-aligned" :class="{ 'multiple-entries': (universitySelected != null && universitySelected.web_pages.length > 1) }">Web Pages: </td>
+                <td v-if="universitySelected!=null">
+                    <span v-for="webpage in universitySelected.web_pages">
+                        <a v-bind:href="webpage" target="_blank">{{ webpage }}<br /></a>
+                    </span>
+                </td>
+            </tr>
+
+        </table>
+        
+
+    </form>
+      <div align="center">
+        <centre>  <button class="button" style="vertical-align:middle" @click="success()"><span>Click</span></button></centre>
+      </div>
+      </body>
+    
+</div>
+  
+
+
+  
+
+<script src="db.js"></script>
+<script src="index.js"></script>
+
+
+</body>
+</html>
