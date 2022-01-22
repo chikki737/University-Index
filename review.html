@@ -1,0 +1,147 @@
+<html>  
+   <head>  
+      <title>Vue.js Template</title>  
+      <link rel="stylesheet" href="index.css">  
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/db.js"></script>  
+        <script src="https://unpkg.com/vue"></script>
+    </head>  
+    <style>
+        button {
+  background-color: #04AA6D; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 30px;
+  cursor: pointer;
+   border-radius: 50%;
+}
+
+
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.bg-image {
+
+  background-image: url("https://www.lawtechnologytoday.org/wp-content/uploads/2014/07/thankyou.jpg");
+  
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+    </style>
+    <body>
+
+        
+
+<div class="bg-image"></div>
+<div class="bg-text">
+<h2 style="font-size:40px">THANK YOU FOR VISITING PATHSHALA</h2>
+  <h1>WE RESPECT YOUR CHOICE!</h1>
+  
+  <p id="desc"><strong></strong></p>
+
+  
+<div id="app">
+    <rating-counter></rating-counter>
+ </div>
+
+
+</div>
+
+ 
+
+	
+
+      <script type="text/javascript">  
+	Vue.component('rating-counter', {
+    data:function() {
+        return {
+            like_count: 0,
+            dislike_count:0
+           
+        }
+    },
+    template:   `<center><div class='like'>
+                    <button v-on:click="like_count++"> 👍</button>
+                    {{ like_count }}
+                    <button v-on:click="dislike_count++"> 👎</button>
+                    {{ dislike_count }}
+                </div></center>`
+})
+
+var app = new Vue({
+  el: '#app',
+  data: {
+               
+        },
+ 
+})
+
+		
+</script>
+<div align="center">
+    <centre>  <button class="button" style="vertical-align:middle" @click="success()"><span>Click</span></button></centre>
+  </div>
+  </body>
+  <script>
+    new Vue({
+  el: '.button',
+  methods: {
+    success: function(){
+         location.replace("C:/Users/shivs/pro/nodejs/vuejs/la2/wel.html")
+    },
+  
+  }
+    });
+  </script>
+
+
+   </body>  
+</html>

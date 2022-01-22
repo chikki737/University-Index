@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/vue"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.checked {
+  color: orange;
+}
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: black;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+</style>
+</head>
+<body>
+
+</body>
+</html>
+
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGsdESOIusxzKrJjgJDi-a1HDzw0Wa_MJ5Mg&usqp=CAU" alt="BRAZIL" style="width:60%">
+    <h1>BRAZIL</h1>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>  
+  </div>
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHHf5oysGlqkLHJOoZYg_HWcK8FvXl4HQbiw&usqp=CAU" alt="INDIA" style="width:60%">
+    <h1>INDIA</h1>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>  
+</div>
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6SeVmms9om6k_J4o5QXh7AYKqqBad8nkhrQ&usqp=CAU" alt="UNITED STATES" style="width:60%">
+    <h1>UNITED STATES</h1>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>  
+</div>
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsyaBrxSxPPNZNDo2hO0dmNJy_0xoDtLgL7g&usqp=CAU" alt="GERMANY" style="width:60%">
+    <h1>GERMANY</h1>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>  
+</div>
+  <div class="column">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYFi1-u0BKwlwM_XsqDsiWLws4kOdelaFijw&usqp=CAU" alt="JAPAN" style="width:60%">
+    <h1>JAPAN</h1>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>  
+</div>
+</div>
+<div class="row">
+    <div class="column">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqNWGP1pnXH73QL36w_Ls9g-8k3KwGs-GOdQ&usqp=CAU" alt="FRANCE" style="width:60%">
+        <h1>FRANCE</h1>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>  
+    </div>
+      <div class="column">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCsN2jAApEt229XJtMyFgU3oXiNrrlSr8eHQ&usqp=CAU" alt="SWITZERLAND" style="width:60%">
+        <h1>SWITZERLAND</h1>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>  
+    </div>
+      <div class="column">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlNz-cLh-C49HGXtkCkagitxtxbFWCCBdjpg&usqp=CAU" alt="PHILIPPINES" style="width:60%">
+        <h1>PHILIPPINES</h1>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>  
+    </div>
+      <div class="column">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMrKcjDW9kZPEU212RiMJuY-WSSUAcefdW2A&usqp=CAU" alt="CANADA" style="width:60%">
+        <h1>CANADA</h1>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>  
+    </div>
+      <div class="column">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuxxgFSILZeZfwGoxrdmHNKTKGq4SnSmaEdQ&usqp=CAU" alt="KOREA" style="width:60%">
+        <h1>KOREA</h1>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>  
+    </div>   
+</div>
+<div align="center">
+  <centre>  <button class="button" style="vertical-align:middle" @click="success()"><span>Click</span></button></centre>
+</div>
+</body>
+<script>
+  new Vue({
+el: '.button',
+methods: {
+  success: function(){
+       location.replace("C:/Users/shivs/pro/nodejs/vuejs/la2/index.html")
+  },
+
+}
+  });
+</script>
+</html>

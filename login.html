@@ -1,0 +1,118 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login Form</title>    
+    <link rel="stylesheet" type="text/css" href="css/style.css">    
+    <script src="https://unpkg.com/vue"></script>
+</head>  
+
+
+<style>
+    body  
+    {  
+        margin: 0;  
+        padding: 0;  
+        background-color:#1DB954;  
+        font-family: 'Arial';  
+    }  
+    .login{  
+            width: 382px;  
+            overflow: hidden;  
+            margin: auto;  
+            margin: 20 0 0 450px;  
+            padding: 80px;  
+            background: black;  
+            border-radius: 15px ;  
+              
+    }  
+    h2{  
+        text-align: center;  
+        color: white;  
+        padding: 20px;  
+    }  
+    label{  
+        color: #08ffd1;  
+        font-size: 17px;  
+    }  
+    #Uname{  
+        width: 300px;  
+        height: 30px;  
+        border: none;  
+        border-radius: 3px;  
+        padding-left: 8px;  
+    }  
+    #Pass{  
+        width: 300px;  
+        height: 30px;  
+        border: none;  
+        border-radius: 3px;  
+        padding-left: 8px;  
+          
+    }  
+    #log{  
+        width: 300px;  
+        height: 30px;  
+        border: none;  
+        border-radius: 17px;  
+        padding-left: 7px;  
+        color: blue;  
+      
+      
+    }  
+    span{  
+        color: white;  
+        font-size: 17px;  
+    }  
+    a{  
+        float: right;  
+        background-color: grey;  
+    }  
+    </style>
+    
+<body>    
+    <h2>Login Here!</h2><br>    
+    <div class="login">    
+        
+    <form id="login" method="get" action="login.php">    
+        <label><b>User Name     
+        </b>    
+        </label>    
+        <input type="text" name="Uname" id="Uname" placeholder="Username">    
+        <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>    
+        <input type="Password" name="Pass" id="Pass" placeholder="Password">    
+        <br><br>    
+        <input type="button" name="log" @click="success()" id="log" value="Log In Here">       
+        <br><br>             
+    </form>     
+</div>    
+</body>    
+
+
+
+<script>
+    new Vue({
+el: '.login',
+data: {
+    user:" ",
+    
+},
+methods: {
+    success: function(){
+        var name=document.getElementById('Uname').value;
+        {
+            alert('You have successfully logged in!')
+         location.replace("C:/Users/shivs/pro/nodejs/vuejs/la2/rate.html")
+        }
+        
+     
+    },
+  
+}
+});
+
+</script>
+
+</html>
